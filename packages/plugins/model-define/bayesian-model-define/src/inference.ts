@@ -1,7 +1,3 @@
-/**
- * @file This is for the plugin to load Bayes Classifier model.
- */
-
 import { CsvSample } from '@pipcook/pipcook-core';
 import { join } from 'path';
 import { processPredictData, loadModel } from './script';
@@ -23,4 +19,4 @@ export default async function inference (recoverPath: string): Promise<any> {
     const processData = await processPredictData(text.data, featurePath, stopwordsPath);
     return model.predict(processData).toString();
   };
-};
+}
